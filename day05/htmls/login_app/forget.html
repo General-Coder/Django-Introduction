@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="{% url 'login_app:forget' %}" method="post">
+        {% csrf_token %}
+        请输入你要重置密码的账户：<input type="text" name="fname">
+        <br>
+        <input type="submit" value="下一步">
+    </form>
+</body>
+</html>

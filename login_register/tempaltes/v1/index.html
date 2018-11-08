@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+</head>
+<body>
+    欢迎:{{ user_name}}
+    <br>
+    <a href="{% url 'v1:login' %}">登录</a>
+    <a href="{% url 'v1:register' %}">注册</a>
+    <a href="{% url 'v1:reset' %}">忘记密码</a>
+
+    <a href="{% url 'v1:logout' %}">退出</a>
+</body>
+</html>

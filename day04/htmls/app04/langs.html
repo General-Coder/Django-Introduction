@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <ul>
+        {% for foo in langs %}
+            <li>{{forloop.revcounter0}}我喜欢的语言有{{foo.name}},理由是{{foo.desc}}</li>
+        {% endfor %}
+    </ul>
+
+    <hr>
+    第一个语言是:{{langs.0.name}}
+    <br>
+    调用函数:{{langs.1.get_desc}}
+
+    {% if langs.0.name == "s" %}
+        <h5>第一个是python</h5>
+        {% else %}
+            <br><br>
+            <li>呵呵</li>
+            <li>挖掘机好厉害</li>
+    {% endif %}
+</body>
+</html>

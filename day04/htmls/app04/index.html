@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+</head>
+<body>
+    <a href="{% url 'app04:langs' %}">查看所有语言</a>
+    <a href="http://www.baidu.com">去百度</a>
+    <a href="{% url 'app04:myindex_with_param' 2%}">查看语言</a>
+    <a href="{% url 'app04:myindex_with_param_v1' p2=2 %}">查看语言V1</a>
+</body>
+</html>

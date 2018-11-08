@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>主页</title>
+</head>
+<body>
+    <ul>
+        <li><a href={% url 'app04_01:show_info' %}>查看所有信息</a></li>
+        <li><a href="https://www.baidu.com">百度一下，你就知道</a></li>
+        <li><a href="{% url 'app04_01:new_show_info' 3%}">重定向和反向解析</a></li>
+        <li><a href="{% url 'app04_01:show_info1' num=5%}">重定向和反向解析1</a></li>
+
+    </ul>
+</body>
+</html>

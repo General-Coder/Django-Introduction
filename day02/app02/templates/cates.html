@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    {% for cate in cates %}
+{#        拼接路径#}
+        <li><a href="/my_cate_item?c_id={{cate.id}}">{{cate.name}}--{{cate.id}}</a></li>
+    {% endfor %}
+
+
+</ul>
+</body>
+</html>

@@ -1,0 +1,5 @@
+endpoint = 'http://oss-cn-shanghai.aliyuncs.com'
+access_key_id = 'LTAIXPTosazV9jSq'
+access_key_secret = '7uXYe15rjLzEjStAwVraExvAWFkxIw'
+bucket_name = 'share-msg'
+bucket_name_host = "share-msg.oss-cn-shanghai.aliyuncs.com"

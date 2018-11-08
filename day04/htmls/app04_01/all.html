@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>所有信息</title>
+</head>
+<body>
+    <h3>我是所有信息</h3>
+    <ul>
+        {% for info in data %}
+            {% if forloop.counter|divisibleby:2 %}
+                <li style="color: red">
+                    我是{{info.name}},这是我的信息{{info.content}}
+                </li>
+            {% else %}
+                <li style="color: blue">
+                    我是{{info.name}},这是我的信息{{info.content}}
+                </li>
+            {% endif %}
+
+        {% endfor %}
+    </ul>
+</body>
+</html>

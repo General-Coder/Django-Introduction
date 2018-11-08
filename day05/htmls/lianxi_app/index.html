@@ -1,0 +1,15 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="{% static 'css/8000.css' %}">
+<head>
+    <meta charset="UTF-8">
+    <title>主页</title>
+</head>
+<body>
+    欢迎{{ username}}
+    <br>
+    <a href="{% url 'lianxi_app:login' %}" >登录</a>
+    <a href="{% url 'lianxi_app:logout' %}">退出</a>
+</body>
+</html>

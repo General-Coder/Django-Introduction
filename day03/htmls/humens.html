@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>人类</title>
+</head>
+<body>
+    <ol>
+        {% for foo in humens %}
+            <li>{{foo.name}}的年纪是{{foo.age}}的金钱是{{foo.money}}</li>
+        {% endfor %}
+    </ol>
+</body>
+</html>

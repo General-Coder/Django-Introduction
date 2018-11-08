@@ -1,0 +1,18 @@
+EMAIL_USE_SSL = True
+
+EMAIL_HOST = 'smtp.qq.com'  # 如果是 163 改成 smtp.163.com
+
+EMAIL_PORT = 465
+
+EMAIL_HOST_USER = "xxx@qq.com" 
+
+EMAIL_HOST_PASSWORD = "xxxxx" 
+
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+
+
+EMAIL_HOST_USER = "493024318@qq.com"  # 帐号
+
+EMAIL_HOST_PASSWORD = "yaricwaaydxvbggb" 
+
+https://docs.djangoproject.com/zh-hans/2.0/topics/email/

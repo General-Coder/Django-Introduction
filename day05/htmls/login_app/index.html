@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+</head>
+<body>
+    欢迎:{{ user_name}}
+    <br>
+    <a href="{% url 'login_app:login' %}">登录</a>
+    <a href="{% url 'login_app:register' %}">注册</a>
+    <a href="{% url 'login_app:forget_pwd' %}">忘记密码</a>
+    <a href="{%  url 'login_app:logout' %}">退出</a>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>查询学生</title>
+    <style type="text/css">
+        h3{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h3>python分数大于80的人有：</h3>
+    <ul>
+        {% for temp1 in data1 %}
+            <li>{{temp1.name}},python分数为{{temp1.python_score}}</li>
+        {% endfor %}
+
+    </ul>
+
+    <h3>年龄在18-20岁的人有：</h3>
+    <ul>
+        {% for temp2 in data2 %}
+            <li>{{temp2.name}},年级为{{temp2.age}}</li>
+        {% endfor %}
+
+    </ul>
+
+    <h3>英语成绩为100,99,59的人有：</h3>
+    <ul>
+        {% for temp3 in data3 %}
+            <li>{{temp3.name}},英语成绩为{{temp3.english_score}}</li>
+        {% endfor %}
+
+    </ul>
+</body>
+</html>

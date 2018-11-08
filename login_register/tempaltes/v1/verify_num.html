@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="{% static 'js/jquery-3.3.1.js' %}"></script>
+</head>
+<body>
+<h3 style="color: red">谢谢注册</h3>
+
+           <input type="text" name="num"  placeholder="验证码" id="num">
+           <input type="submit" value="提交" id="sub">
+
+</body>
+<script type="text/javascript" >
+    $(function () {
+        $('#sub').click(function () {
+            var num = $('#num').val();
+            $.ajax({
+                url:'/v1/verify_num',
+                data:{
+                    'num':num
+                },
+                method:'post',
+                success:function (res) {
+                    if(res.code==1){
+                        alert('验证成功');
+                        window.open(res.data,target='_self')
+                    }else{
+                        alert('验证错误')
+                    }
+                }
+            })
+        })
+    })
+</script>
+</html>
