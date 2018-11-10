@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = ')8=bb#x0air-yc7k$0z6*bo2lob*(p!rj!6%^6^vq8egrp(=wf'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -87,8 +87,8 @@ DATABASES = {
         'NAME': "axf_project",
         'PORT': 3306,
         "HOST": "101.132.145.148",
-        "USER": os.environ.get("DB_USER"),
-        "PASSWORD": os.environ.get("DB_PWD")
+        "USER": 'zd',
+        "PASSWORD": 'zhangding'
     }
 }
 
@@ -161,11 +161,11 @@ EMAIL_HOST = 'smtp.163.com'  # 如果是 163 改成 smtp.163.com
 
 EMAIL_PORT = 465
 
-# EMAIL_HOST_USER = "17625904460@qq.com"  # 帐号
-EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
+EMAIL_HOST_USER = "17625904460@163.com"  # 帐号
+# EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
 
-# EMAIL_HOST_PASSWORD = "zd010803"  # 授权码（****）
-EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
+EMAIL_HOST_PASSWORD = "zd010803"  # 授权码（****）
+# EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
 
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 EMAIL_BACKEND ='django.core.mail.backends.smtp.EmailBackend'

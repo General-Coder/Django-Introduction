@@ -273,3 +273,19 @@ class OrderItem(models.Model):
         max_digits=10,
         decimal_places=2
     )
+
+
+class Member(models.Model):
+    user = models.ForeignKey(
+        MyUser
+    )
+    desc = models.CharField(
+        default='普通会员',
+        max_length=100
+    )
+    is_active = models.BooleanField(
+        default=True
+    )
+
+
+

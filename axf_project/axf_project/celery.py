@@ -4,7 +4,7 @@ from django.conf import settings
 import os
 
 #设置系统的环境配置用的是Django的
-os.environ.setdefault("DJANGO_SETTING_MODULE", "axf_project.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "axf_project.settings")
 
 #实例化celery
 app = Celery('mycelery')
