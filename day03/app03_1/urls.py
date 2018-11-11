@@ -11,5 +11,7 @@ urlpatterns = [
     url(r'^students$',get_stu_by_grade),
     url(r'^author$',get_author_by_book),
     url(r'^book$',get_book_by_author),
-
+    url(r'^raw_test$',get_raw_grade),
+    url(r'^raw_test1$',get_raw_grade1),
+    url(r'^raw_test2$',get_raw_grade2),
 ]

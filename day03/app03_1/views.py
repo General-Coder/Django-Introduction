@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from .models import *
 from django.http import HttpResponse
-
+from django.db import  connection,transaction
 
 # Create your views here.
 
@@ -76,3 +76,20 @@ def get_book_by_author(req):
     author = Author.objects.get(pk = 1)
     res = author.book_set.all()
     return  HttpResponse(res)
+
+def get_raw_grade(req):
+    obj = Grade.objects.raw('select * from app03_1_grade;')
+    for i in obj:
+        print(i)
+    return HttpResponse('ok')
+
+def get_raw_grade1(req):
+    obj = Grade.objects.raw('select * from app03_1_grade where id >2 ;')[0]
+    print(obj)
+    return HttpResponse('ok')
+
+def get_raw_grade2(req):
+    obj = Grade.objects.raw('select * from app03_1_grade limit 1 ;')[0]
+    print(obj)
+    return HttpResponse('ok')
+
